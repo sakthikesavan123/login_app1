@@ -2,6 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
+import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
+import '@trendmicro/react-sidenav/dist/react-sidenav.css';
+import { makeStyles } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import List from '@material-ui/core/List';
+import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import MailIcon from '@material-ui/icons/Mail';
+
+
 const styles = {
     facebookBtn: {
       backgroundColor: 'rgb(51, 89, 157)'
@@ -85,9 +102,50 @@ const styles = {
        
   }
   class Wel extends React.Component {
+   
       render(){
-        return(<div> Welcome
-          </div>)
+        return(
+        <div>
+        <div className="col-sm-12 header"> 
+            <div className="col-sm-3">
+              <img className="img" src="https://i.ibb.co/sw1MLKt/1-UU0-O3x5-Wn-Ie3c6-Kaz-W1-Gw.png" border="0"/>
+            </div>
+            <div className="col-sm-6 con">
+              
+              <center>
+                <h3>Digital Twin
+                </h3>
+              <h5>Taking warehouse from Physical to Digital
+                </h5>
+                </center>
+            </div>
+            <div  className="col-sm-3">
+            <img className="wipro" src="https://www.wipro.com/content/dam/nexus/en/brand/Wipro-Logo-w88X70h-Px.png"  border="0"/>
+            </div>
+          </div>
+          <div className="col-sm-12">
+
+          <div className="row">
+          <div className="col-3">
+            <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a className="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+              <a className="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+              <a className="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+              <a className="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+            </div>
+          </div>
+          <div className="col-9">
+            <div className="tab-content" id="v-pills-tabContent">
+              <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
+              <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+              <div className="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+              <div className="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+          )
       }
   }
 
@@ -176,10 +234,7 @@ const styles = {
     render () {
       const {children, title} = this.props
       return (
-        <div className='col-md-6 mx-auto'>
-          <header>
-            <h1>{title}</h1>
-          </header>
+        <div >
           {children}
         </div>
       )
